@@ -33,9 +33,9 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- <link href="{{ asset('css/azia.css') }}" rel="stylesheet"> --}}
-
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('css/azia.css') }}" rel="stylesheet">
+    
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{ asset('css/dashforge.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/dashforge.customs.css') }}" />
