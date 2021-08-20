@@ -6,17 +6,17 @@
               <nav aria-label="breadcrumb" class="d-none d-lg-block">
                 <ol class="breadcrumb breadcrumb-style2 mg-b-10">
                   <li class="breadcrumb-item"><a href="../dashboard">Beranda</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Jenis Vaksin</li>
+                  <li class="breadcrumb-item active" aria-current="page">Vaksinasinator</li>
                 </ol>
               </nav>
               <h4 class="mg-b-0 tx-montserrat tx-medium text-truncate">
-                Jenis Vaksin
+                Vaksinasinator
               </h4>
             </div>
             <div class="d-lg-none mg-t-10">
             </div>
             <div>
-              <a href="#tambahjenisvaksin" data-toggle="modal" data-animation="effect-scale" class="btn btn-its tx-montserrat tx-semibold"><i data-feather="plus" class="wd-10 mg-r-5 tx-color-its2"></i> Tambah</a>
+              <a href="#tambahvaksinator" data-toggle="modal" data-animation="effect-scale" class="btn btn-its tx-montserrat tx-semibold"><i data-feather="plus" class="wd-10 mg-r-5 tx-color-its2"></i> Tambah</a>
             </div>
           </div>
 
@@ -32,13 +32,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach ($jenis_vaksins as $jv)
-                        <tr>
-                          <td class="td-its align-middle border-bottom">{{ $jv->nama }}</td>
-                          <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon" role="button" data-toggle="modal" data-target="#hapusjenisvaksin" data-animation="effect-scale"><i data-feather="trash" class="wd-10"></i></a></td>
-                        </tr>
-                            
-                        @endforeach
+                      @foreach ($vaksinators as $v)
+                      <tr>
+                        <td class="td-its align-middle border-bottom">{{ $v->nama }}</td>
+                        <td class="td-its align-middle border-bottom"><a href="#" class="btn btn-white btn-icon" role="button" data-toggle="modal" data-target="#hapusvaksinator" data-animation="effect-scale"><i data-feather="trash" class="wd-10"></i></a></td>
+                      </tr>
+                          
+                      @endforeach
                     </tbody>
                   </table>
                 </div>
@@ -46,7 +46,7 @@
             </div>
 
           </div><!-- row -->
-    <div class="modal fade effect-scale" id="tambahjenisvaksin" tabindex="-1" role="dialog" aria-labelledby="modalmyfile" aria-hidden="true">
+    <div class="modal fade effect-scale" id="tambahvaksinator" tabindex="-1" role="dialog" aria-labelledby="modalmyfile" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-body">
@@ -55,7 +55,7 @@
             </button>
             <h5 class="tx-montserrat tx-medium" id="tambahjenisvaksinLabel">Tambah Jenis Vaksin</h5>
           </div>
-          <form action="{{route('jenis-vaksin')}}" method="POST">
+          <form action="{{route('vaksinator')}}" method="POST">
             @csrf
             <div class="modal-body pd-t-0">
               <div class="form-group">

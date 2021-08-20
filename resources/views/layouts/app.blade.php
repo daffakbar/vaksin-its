@@ -34,7 +34,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/azia.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/azia.css') }}" rel="stylesheet"> --}}
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="{{ asset('css/dashforge.css') }}" />
@@ -82,7 +82,7 @@
             >
           </li>
           <li class="nav-item">
-            <a href="../admin/vaksinator.html" class="nav-link"
+            <a href="{{ route('vaksinator') }}" class="nav-link"
               ><i data-feather="users"></i> <span>Vaksinator</span></a
             >
           </li>

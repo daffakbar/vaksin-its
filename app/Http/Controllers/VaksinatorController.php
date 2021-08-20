@@ -14,7 +14,8 @@ class VaksinatorController extends Controller
      */
     public function index()
     {
-        //
+        $vaksinators = Vaksinator::get();
+        return view('admin/vaksinator', compact('vaksinators'));
     }
 
     /**
@@ -35,7 +36,10 @@ class VaksinatorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_vaksinator = new Vaksinator;
+        $new_vaksinator->nama = $request->get('nama');
+        $new_vaksinator->save();
+        return redirect()->route('vaksinator-post');
     }
 
     /**

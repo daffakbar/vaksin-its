@@ -14,7 +14,8 @@ class JenisVaksinController extends Controller
      */
     public function index()
     {
-        return view('admin/jenis-vaksin');
+        $jenis_vaksins = JenisVaksin::get();
+        return view('admin/jenis-vaksin', compact('jenis_vaksins'));
     }
 
     /**
@@ -35,7 +36,10 @@ class JenisVaksinController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_jenis_vaksin = new JenisVaksin;
+        $new_jenis_vaksin->nama = $request->get('nama');
+        $new_jenis_vaksin->save();
+        return redirect()->route('jenis-vaksin');
     }
 
     /**
